@@ -8,20 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Skulpt CDN para compilar Python en el cliente -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script> 
   <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js" type="text/javascript"></script> 
   <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js" type="text/javascript"></script> 
 </head>
 <body>
-  <!-- Mesh Gradient Background Elements -->
   <div class="bg-orb orb-1"></div>
   <div class="bg-orb orb-2"></div>
   <div class="bg-orb orb-3"></div>
 
   <div id="game-container">
     <header class="game-header glass-panel">
-      <h1>🚀 PYTHON QUEST: OPERATION NEBULA</h1>
+      <h1>OPERACION NEBULA</h1>
       <div id="game-stats" class="stats-container">
         <div id="score-display">PUNTOS <span id="score-text">0</span></div>
         <div id="level-display">NIVEL <span id="current-level-text">1</span></div>
@@ -29,17 +27,14 @@
     </header>
     
     <main class="game-layout">
-      <!-- Izquierda: Ruta de Niveles (Sidebar) -->
       <aside class="sidebar glass-panel">
         <div class="sidebar-header">MAPA ESTELAR</div>
         <div class="level-path-container">
           <ul id="level-path-list" class="level-path">
-            <!-- Nodos generados por JS -->
           </ul>
         </div>
       </aside>
 
-      <!-- Centro: Historia y visualización -->
       <section class="story-panel glass-panel">
         <div class="mission-header">
           <h2 id="level-title">Iniciando Sistemas...</h2>
@@ -48,14 +43,12 @@
           <p id="level-description" class="mission-briefing">Cargando la misión...</p>
         </div>
         <div class="ship-status glass-inset">
-          <h3>🎮 ESTADO DE NAVE</h3>
+          <h3>ESTADO DE NAVE</h3>
           <div id="game-visualizer">
-            <!-- Los elementos visuales interactivos se generan acá -->
           </div>
         </div>
       </section>
 
-      <!-- Derecha: Editor y terminal -->
       <section class="editor-panel glass-panel">
         <div class="panel-header">
           <div class="window-controls">
@@ -84,7 +77,6 @@
       </section>
     </main>
 
-    <!-- Modal al completar nivel -->
     <div id="success-overlay" class="hidden">
       <div class="overlay-content glass-panel">
         <div class="icon-pulse">
@@ -92,7 +84,7 @@
         </div>
         <h2>MISIÓN EXITOSA</h2>
         <p id="success-message">¡El sistema ha sido reparado!</p>
-        <button id="next-level-btn" class="cyber-btn primary">Siguiente Nivel ➡️</button>
+        <button id="next-level-btn" class="cyber-btn primary">Siguiente Nivel</button>
       </div>
     </div>
   </div>
