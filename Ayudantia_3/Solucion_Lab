@@ -1,0 +1,54 @@
+"""
+En Animal Crossing, el negocio de los nabos está creciendo y Canela ha decidido invertir todos su ahorros en nabos. La semana pasada compró un gran cargamento a 100 bayas cada uno y durante las siguientes semanas, estuvo analizando los precios de venta que ofrecían en la tienda de Tom Nook cada mañana y cada tarde, consiguiendo un total de 35 datos por semana, con los datos recopilados, ella solicita tu ayuda para saber si su inversión fue un éxito o un fracaso financiero.
+
+Archivo: Precios_Nook's_Cranny.txt Download Precios_Nook's_Cranny.txt← Copiar y pegar en el código.
+
+1.- (10%) Si compró 500 nabos a un precio fijo de 100 bayas cada uno, calcula cuánto es el total de su inversión inicial.
+
+2.- (20%) Calcula el precio promedio de venta durante todo el periodo, y la diferencia entre el precio más alto y el precio más bajo registrado.
+
+3.- (35%) Calcula el promedio de los precios de venta de cada semana por separado.
+
+4.- (35%) Si Canela decidió vender sus 500 nabos al precio del promedio de la semana 2, ¿De cuánto fue su ingreso total? (Si hubo ganancia, imprime ganancia, y si hubo pérdida, imprime pérdida).
+
+*Para que un negocio se considere con ganancias, el ingreso debe ser mayor a la inversión inicial.
+"""
+precios_nabos = [95, 92, 87, 83, 79, 74, 70, 66, 61, 58, 55, 52, 48, 45,
+120, 150, 190, 450, 180, 120, 90, 85, 80, 75, 70, 65, 60, 55, 50, 45, 40,
+35, 30, 25, 20,110, 115, 120, 125, 130, 140, 150, 160, 170, 180, 190, 200,
+210, 220, 210, 200, 190, 180, 170, 160, 150, 140, 130, 120, 110, 105, 100,
+95, 90, 85, 80, 75, 70, 65, 60]
+
+# 1
+cantidad_nabos = 500
+precio_compra = 100
+inversion_total = cantidad_nabos * precio_compra
+print(f"Inversión inicial: {inversion_total} bayas")
+
+#2
+promedio_total = round(sum(precios_nabos) / len(precios_nabos))
+diferencia_max_min = max(precios_nabos) - min(precios_nabos)
+
+print(f"Precio promedio global: {promedio_total}")
+print(f"Rango de precios (Max - Min): {diferencia_max_min}")
+
+#3
+semana1 = precios_nabos[0:35]
+semana2 = precios_nabos[35:70]
+
+prom_s1 = round(sum(semana1) / len(semana1))
+prom_s2 = round(sum(semana2) / len(semana2))
+
+print(f"Promedio Semana 1: {prom_s1}")
+print(f"Promedio Semana 2: {prom_s2}")
+
+#4
+ingreso_venta = cantidad_nabos * prom_s2
+print(f"Ingreso por vender en Semana 2: {ingreso_venta} bayas")
+
+if ingreso_venta > inversion_total:
+    ganancia = ingreso_venta - inversion_total
+    print(f"Canelita tuvo ganancia de {ganancia} bayas.")
+else:
+    perdida = inversion_total - ingreso_venta
+    print(f"Canela perdio {perdida} bayas. F por sus ahorros.")
