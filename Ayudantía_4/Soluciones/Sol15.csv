@@ -1,0 +1,5 @@
+Paso / Iteración,Condición (k < 4),Elementos a comparar (lista_a[k] y lista_b[k]),Condición if (Son iguales?),coincidencias,lista_b (Estado),k (k += 2)
+Inicio,-,-,-,0,"[1, 2, 5, 8]",0
+Iteración 1,0 < 4 (Verdadero),"lista_a[0] = 1, lista_b[0] = 1",1 == 1 (Verdadero -> coincidencia),0 + 1 = 1,"[1, 2, 5, 8]",0 + 2 = 2
+Iteración 2,2 < 4 (Verdadero),"lista_a[2] = 5, lista_b[2] = 5",5 == 5 (Verdadero -> coincidencia),1 + 1 = 2,"[1, 2, 5, 8]",2 + 2 = 4
+Fin del ciclo,4 < 4 (Falso),-,-,2,"[1, 2, 5, 8]",4
