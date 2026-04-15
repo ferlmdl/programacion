@@ -1,0 +1,8 @@
+Paso / Iteración,Condición (indice < 5),valores[indice],Condición if (% 2 == 0),resultado,indice (Al final: indice += 1)
+Inicio,-,-,-,0,0
+Iteración 1,0 < 5 (Verdadero),valores[0] = 4,4 % 2 == 0 (Verdadero -> suma),0 + 4 = 4,0 + 1 = 1
+Iteración 2,1 < 5 (Verdadero),valores[1] = 7,7 % 2 == 0 (Falso -> resta 1),4 - 1 = 3,1 + 1 = 2
+Iteración 3,2 < 5 (Verdadero),valores[2] = 2,2 % 2 == 0 (Verdadero -> suma),3 + 2 = 5,2 + 1 = 3
+Iteración 4,3 < 5 (Verdadero),valores[3] = 9,9 % 2 == 0 (Falso -> resta 1),5 - 1 = 4,3 + 1 = 4
+Iteración 5,4 < 5 (Verdadero),valores[4] = 5,5 % 2 == 0 (Falso -> resta 1),4 - 1 = 3,4 + 1 = 5
+Fin del ciclo,5 < 5 (Falso),-,-,3,5
